@@ -10,4 +10,4 @@ RUN curl -L https://raw.githubusercontent.com/MrFeuylle/Nvimconf/main/init.vim -
 RUN chmod 777 /root/.config/nvim/init.vim
 RUN mkdir -p /root/projet
 COPY ./entrypoint.sh /root/projet/entrypoint.sh
-RUN chmod 777 entrypoint.sh
+RUN chmod 777 /root/projet/entrypoint.sh
