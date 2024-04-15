@@ -1,4 +1,5 @@
-git clone git@github.com:MrFeuylle/dockervim.git
-cd dockervim
+#!/bin/bash
+git clone git@github.com:MrFeuylle/dockervim.git /tmp/dockervim
+cd /tmp/dockervim
 docker build -t myimgnvim .
-alias nvi="docker run -it -v $PWD:/root/projet myimgnvim ./entrypoint.sh"
+echo 'alias nvi="docker run -it -v $PWD:/root/projet myimgnvim ./entrypoint.sh"' >> ~/.zshrc
