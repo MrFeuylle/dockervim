@@ -8,6 +8,6 @@ RUN curl -fLo /root/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 RUN curl -L https://raw.githubusercontent.com/MrFeuylle/Nvimconf/main/init.vim -o /root/.config/nvim/init.vim
 
 RUN chmod 777 /root/.config/nvim/init.vim
-COPY ./entrypoint.sh ./entrypoint.sh
+RUN mkdir -p /root/projet
+COPY ./entrypoint.sh /root/projet/entrypoint.sh
 RUN chmod 777 entrypoint.sh
-CMD ["./entrypoint.sh"]
